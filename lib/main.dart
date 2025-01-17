@@ -1,6 +1,8 @@
+import 'package:f1_mobile_frontend_demo/core/blocs/navigation_bar/navigation_bar_bloc.dart';
 import 'package:f1_mobile_frontend_demo/core/utils/dependency_injection/injector.dart';
-import 'package:f1_mobile_frontend_demo/view/pages/f1_details_page.dart';
+import 'package:f1_mobile_frontend_demo/view/pages/main_page.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 void main() {
@@ -23,7 +25,10 @@ class MyApp extends StatelessWidget {
             colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
             useMaterial3: true,
           ),
-          home: F1DetailsPage(),
+          home: BlocProvider(
+            create: (context) => NavigationBarBloc(),
+            child: MainPage(),
+          ),
         );
       },
     );
