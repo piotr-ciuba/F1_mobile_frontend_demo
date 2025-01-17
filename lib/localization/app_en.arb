@@ -1,0 +1,12 @@
+{
+    "driver": "Driver",
+    "circuit": "Circuit",
+    "season": "Season",
+    "result": "Result",
+    "time": "Time",
+    "qualifying": "Qualifying",
+    "sprint": "Sprint",
+    "status": "Status",
+    "name": "Name",
+    "surname": "Surname"
+}

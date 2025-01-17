@@ -1,0 +1,12 @@
+{
+    "driver": "Kierowca",
+    "circuit": "Tor",
+    "season": "Sezon",
+    "result": "Rezultat",
+    "time": "Czas",
+    "qualifying": "Kwalifikacje",
+    "sprint": "Sprint",
+    "status": "Status",
+    "name": "Imię",
+    "surname": "Nazwisko"
+}
