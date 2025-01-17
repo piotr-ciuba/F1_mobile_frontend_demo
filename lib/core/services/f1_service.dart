@@ -1,6 +1,8 @@
 import 'package:dio/dio.dart';
 import 'package:f1_mobile_frontend_demo/core/utils/api_client.dart';
+import 'package:injectable/injectable.dart';
 
+@singleton
 class F1Service {
   F1Service(
     this._apiClient,

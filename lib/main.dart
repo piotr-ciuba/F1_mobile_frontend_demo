@@ -1,7 +1,9 @@
+import 'package:f1_mobile_frontend_demo/core/utils/dependency_injection/injector.dart';
 import 'package:f1_mobile_frontend_demo/view/pages/f1_details_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
+  injectorSetup();
   runApp(const MyApp());
 }
 

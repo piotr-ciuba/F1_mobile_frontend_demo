@@ -2,7 +2,9 @@ import 'package:dio/dio.dart';
 import 'package:f1_mobile_frontend_demo/core/services/f1_service.dart';
 import 'package:f1_mobile_frontend_demo/models/mr_data/mr_data.dart';
 import 'package:f1_mobile_frontend_demo/models/race/race.dart';
+import 'package:injectable/injectable.dart';
 
+@singleton
 class F1Repository {
   F1Repository(
     this.f1service,
