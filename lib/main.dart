@@ -1,6 +1,7 @@
 import 'package:f1_mobile_frontend_demo/core/utils/dependency_injection/injector.dart';
 import 'package:f1_mobile_frontend_demo/view/pages/f1_details_page.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 void main() {
   injectorSetup();
@@ -12,13 +13,19 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: F1DetailsPage(),
+    return ScreenUtilInit(
+      designSize: const Size(402, 874),
+      minTextAdapt: true,
+      builder: (context, child) {
+        return MaterialApp(
+          title: 'Flutter Demo',
+          theme: ThemeData(
+            colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+            useMaterial3: true,
+          ),
+          home: F1DetailsPage(),
+        );
+      },
     );
   }
 }
