@@ -12,9 +12,16 @@ class F1Service {
     validateStatus: (status) => (status ?? 0) < 500,
   );
 
-  Future<Response<dynamic>> getF1Races() async {
+  Future<Response<dynamic>> getF1Races({
+    int? pageLimit,
+  }) async {
     return _apiClient.dio.get(
       _apiClient.endpoints.f1Races,
+      queryParameters: pageLimit != null
+          ? {
+              'limit': pageLimit,
+            }
+          : null,
     );
   }
 
