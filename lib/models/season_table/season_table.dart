@@ -12,4 +12,32 @@ class SeasonTable with _$SeasonTable {
 
   factory SeasonTable.fromJson(Map<String, dynamic> json) =>
       _$SeasonTableFromJson(json);
+
+  static SeasonTable get testModel => SeasonTable(
+        seasons: [
+          Season(
+            season: '1950',
+            url: 'https://en.wikipedia.org/wiki/1950_Formula_One_season',
+          ),
+          Season(
+            season: '1951',
+            url: 'https://en.wikipedia.org/wiki/1951_Formula_One_season',
+          ),
+        ],
+      );
+
+  static String get testModelJson => '''
+  {
+    "Seasons": [
+      {
+        "season": "1950",
+        "url": "https://en.wikipedia.org/wiki/1950_Formula_One_season"
+      },
+      {
+        "season": "1951",
+        "url": "https://en.wikipedia.org/wiki/1951_Formula_One_season"
+      }
+    ]
+  }
+  ''';
 }
