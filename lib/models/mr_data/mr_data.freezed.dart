@@ -30,6 +30,14 @@ mixin _$MrData {
   RaceTable? get raceTable => throw _privateConstructorUsedError;
   @JsonKey(name: 'DriverTable')
   DriverTable? get driverTable => throw _privateConstructorUsedError;
+  @JsonKey(name: 'CircuitTable')
+  CircuitTable? get circuitTable => throw _privateConstructorUsedError;
+  @JsonKey(name: 'ConstructorTable')
+  ConstructorTable? get constructorTable => throw _privateConstructorUsedError;
+  @JsonKey(name: 'SeasonTable')
+  SeasonTable? get seasonTable => throw _privateConstructorUsedError;
+  @JsonKey(name: 'StatusTable')
+  StatusTable? get statusTable => throw _privateConstructorUsedError;
 
   /// Serializes this MrData to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -53,10 +61,18 @@ abstract class $MrDataCopyWith<$Res> {
       String? offset,
       String? total,
       @JsonKey(name: 'RaceTable') RaceTable? raceTable,
-      @JsonKey(name: 'DriverTable') DriverTable? driverTable});
+      @JsonKey(name: 'DriverTable') DriverTable? driverTable,
+      @JsonKey(name: 'CircuitTable') CircuitTable? circuitTable,
+      @JsonKey(name: 'ConstructorTable') ConstructorTable? constructorTable,
+      @JsonKey(name: 'SeasonTable') SeasonTable? seasonTable,
+      @JsonKey(name: 'StatusTable') StatusTable? statusTable});
 
   $RaceTableCopyWith<$Res>? get raceTable;
   $DriverTableCopyWith<$Res>? get driverTable;
+  $CircuitTableCopyWith<$Res>? get circuitTable;
+  $ConstructorTableCopyWith<$Res>? get constructorTable;
+  $SeasonTableCopyWith<$Res>? get seasonTable;
+  $StatusTableCopyWith<$Res>? get statusTable;
 }
 
 /// @nodoc
@@ -82,6 +98,10 @@ class _$MrDataCopyWithImpl<$Res, $Val extends MrData>
     Object? total = freezed,
     Object? raceTable = freezed,
     Object? driverTable = freezed,
+    Object? circuitTable = freezed,
+    Object? constructorTable = freezed,
+    Object? seasonTable = freezed,
+    Object? statusTable = freezed,
   }) {
     return _then(_value.copyWith(
       xmlns: freezed == xmlns
@@ -116,6 +136,22 @@ class _$MrDataCopyWithImpl<$Res, $Val extends MrData>
           ? _value.driverTable
           : driverTable // ignore: cast_nullable_to_non_nullable
               as DriverTable?,
+      circuitTable: freezed == circuitTable
+          ? _value.circuitTable
+          : circuitTable // ignore: cast_nullable_to_non_nullable
+              as CircuitTable?,
+      constructorTable: freezed == constructorTable
+          ? _value.constructorTable
+          : constructorTable // ignore: cast_nullable_to_non_nullable
+              as ConstructorTable?,
+      seasonTable: freezed == seasonTable
+          ? _value.seasonTable
+          : seasonTable // ignore: cast_nullable_to_non_nullable
+              as SeasonTable?,
+      statusTable: freezed == statusTable
+          ? _value.statusTable
+          : statusTable // ignore: cast_nullable_to_non_nullable
+              as StatusTable?,
     ) as $Val);
   }
 
@@ -146,6 +182,62 @@ class _$MrDataCopyWithImpl<$Res, $Val extends MrData>
       return _then(_value.copyWith(driverTable: value) as $Val);
     });
   }
+
+  /// Create a copy of MrData
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $CircuitTableCopyWith<$Res>? get circuitTable {
+    if (_value.circuitTable == null) {
+      return null;
+    }
+
+    return $CircuitTableCopyWith<$Res>(_value.circuitTable!, (value) {
+      return _then(_value.copyWith(circuitTable: value) as $Val);
+    });
+  }
+
+  /// Create a copy of MrData
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $ConstructorTableCopyWith<$Res>? get constructorTable {
+    if (_value.constructorTable == null) {
+      return null;
+    }
+
+    return $ConstructorTableCopyWith<$Res>(_value.constructorTable!, (value) {
+      return _then(_value.copyWith(constructorTable: value) as $Val);
+    });
+  }
+
+  /// Create a copy of MrData
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $SeasonTableCopyWith<$Res>? get seasonTable {
+    if (_value.seasonTable == null) {
+      return null;
+    }
+
+    return $SeasonTableCopyWith<$Res>(_value.seasonTable!, (value) {
+      return _then(_value.copyWith(seasonTable: value) as $Val);
+    });
+  }
+
+  /// Create a copy of MrData
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $StatusTableCopyWith<$Res>? get statusTable {
+    if (_value.statusTable == null) {
+      return null;
+    }
+
+    return $StatusTableCopyWith<$Res>(_value.statusTable!, (value) {
+      return _then(_value.copyWith(statusTable: value) as $Val);
+    });
+  }
 }
 
 /// @nodoc
@@ -163,12 +255,24 @@ abstract class _$$MrDataImplCopyWith<$Res> implements $MrDataCopyWith<$Res> {
       String? offset,
       String? total,
       @JsonKey(name: 'RaceTable') RaceTable? raceTable,
-      @JsonKey(name: 'DriverTable') DriverTable? driverTable});
+      @JsonKey(name: 'DriverTable') DriverTable? driverTable,
+      @JsonKey(name: 'CircuitTable') CircuitTable? circuitTable,
+      @JsonKey(name: 'ConstructorTable') ConstructorTable? constructorTable,
+      @JsonKey(name: 'SeasonTable') SeasonTable? seasonTable,
+      @JsonKey(name: 'StatusTable') StatusTable? statusTable});
 
   @override
   $RaceTableCopyWith<$Res>? get raceTable;
   @override
   $DriverTableCopyWith<$Res>? get driverTable;
+  @override
+  $CircuitTableCopyWith<$Res>? get circuitTable;
+  @override
+  $ConstructorTableCopyWith<$Res>? get constructorTable;
+  @override
+  $SeasonTableCopyWith<$Res>? get seasonTable;
+  @override
+  $StatusTableCopyWith<$Res>? get statusTable;
 }
 
 /// @nodoc
@@ -192,6 +296,10 @@ class __$$MrDataImplCopyWithImpl<$Res>
     Object? total = freezed,
     Object? raceTable = freezed,
     Object? driverTable = freezed,
+    Object? circuitTable = freezed,
+    Object? constructorTable = freezed,
+    Object? seasonTable = freezed,
+    Object? statusTable = freezed,
   }) {
     return _then(_$MrDataImpl(
       xmlns: freezed == xmlns
@@ -226,6 +334,22 @@ class __$$MrDataImplCopyWithImpl<$Res>
           ? _value.driverTable
           : driverTable // ignore: cast_nullable_to_non_nullable
               as DriverTable?,
+      circuitTable: freezed == circuitTable
+          ? _value.circuitTable
+          : circuitTable // ignore: cast_nullable_to_non_nullable
+              as CircuitTable?,
+      constructorTable: freezed == constructorTable
+          ? _value.constructorTable
+          : constructorTable // ignore: cast_nullable_to_non_nullable
+              as ConstructorTable?,
+      seasonTable: freezed == seasonTable
+          ? _value.seasonTable
+          : seasonTable // ignore: cast_nullable_to_non_nullable
+              as SeasonTable?,
+      statusTable: freezed == statusTable
+          ? _value.statusTable
+          : statusTable // ignore: cast_nullable_to_non_nullable
+              as StatusTable?,
     ));
   }
 }
@@ -241,7 +365,11 @@ class _$MrDataImpl implements _MrData {
       this.offset,
       this.total,
       @JsonKey(name: 'RaceTable') this.raceTable,
-      @JsonKey(name: 'DriverTable') this.driverTable});
+      @JsonKey(name: 'DriverTable') this.driverTable,
+      @JsonKey(name: 'CircuitTable') this.circuitTable,
+      @JsonKey(name: 'ConstructorTable') this.constructorTable,
+      @JsonKey(name: 'SeasonTable') this.seasonTable,
+      @JsonKey(name: 'StatusTable') this.statusTable});
 
   factory _$MrDataImpl.fromJson(Map<String, dynamic> json) =>
       _$$MrDataImplFromJson(json);
@@ -264,10 +392,22 @@ class _$MrDataImpl implements _MrData {
   @override
   @JsonKey(name: 'DriverTable')
   final DriverTable? driverTable;
+  @override
+  @JsonKey(name: 'CircuitTable')
+  final CircuitTable? circuitTable;
+  @override
+  @JsonKey(name: 'ConstructorTable')
+  final ConstructorTable? constructorTable;
+  @override
+  @JsonKey(name: 'SeasonTable')
+  final SeasonTable? seasonTable;
+  @override
+  @JsonKey(name: 'StatusTable')
+  final StatusTable? statusTable;
 
   @override
   String toString() {
-    return 'MrData(xmlns: $xmlns, series: $series, url: $url, limit: $limit, offset: $offset, total: $total, raceTable: $raceTable, driverTable: $driverTable)';
+    return 'MrData(xmlns: $xmlns, series: $series, url: $url, limit: $limit, offset: $offset, total: $total, raceTable: $raceTable, driverTable: $driverTable, circuitTable: $circuitTable, constructorTable: $constructorTable, seasonTable: $seasonTable, statusTable: $statusTable)';
   }
 
   @override
@@ -284,13 +424,33 @@ class _$MrDataImpl implements _MrData {
             (identical(other.raceTable, raceTable) ||
                 other.raceTable == raceTable) &&
             (identical(other.driverTable, driverTable) ||
-                other.driverTable == driverTable));
+                other.driverTable == driverTable) &&
+            (identical(other.circuitTable, circuitTable) ||
+                other.circuitTable == circuitTable) &&
+            (identical(other.constructorTable, constructorTable) ||
+                other.constructorTable == constructorTable) &&
+            (identical(other.seasonTable, seasonTable) ||
+                other.seasonTable == seasonTable) &&
+            (identical(other.statusTable, statusTable) ||
+                other.statusTable == statusTable));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, xmlns, series, url, limit,
-      offset, total, raceTable, driverTable);
+  int get hashCode => Object.hash(
+      runtimeType,
+      xmlns,
+      series,
+      url,
+      limit,
+      offset,
+      total,
+      raceTable,
+      driverTable,
+      circuitTable,
+      constructorTable,
+      seasonTable,
+      statusTable);
 
   /// Create a copy of MrData
   /// with the given fields replaced by the non-null parameter values.
@@ -317,7 +477,12 @@ abstract class _MrData implements MrData {
           final String? offset,
           final String? total,
           @JsonKey(name: 'RaceTable') final RaceTable? raceTable,
-          @JsonKey(name: 'DriverTable') final DriverTable? driverTable}) =
+          @JsonKey(name: 'DriverTable') final DriverTable? driverTable,
+          @JsonKey(name: 'CircuitTable') final CircuitTable? circuitTable,
+          @JsonKey(name: 'ConstructorTable')
+          final ConstructorTable? constructorTable,
+          @JsonKey(name: 'SeasonTable') final SeasonTable? seasonTable,
+          @JsonKey(name: 'StatusTable') final StatusTable? statusTable}) =
       _$MrDataImpl;
 
   factory _MrData.fromJson(Map<String, dynamic> json) = _$MrDataImpl.fromJson;
@@ -340,6 +505,18 @@ abstract class _MrData implements MrData {
   @override
   @JsonKey(name: 'DriverTable')
   DriverTable? get driverTable;
+  @override
+  @JsonKey(name: 'CircuitTable')
+  CircuitTable? get circuitTable;
+  @override
+  @JsonKey(name: 'ConstructorTable')
+  ConstructorTable? get constructorTable;
+  @override
+  @JsonKey(name: 'SeasonTable')
+  SeasonTable? get seasonTable;
+  @override
+  @JsonKey(name: 'StatusTable')
+  StatusTable? get statusTable;
 
   /// Create a copy of MrData
   /// with the given fields replaced by the non-null parameter values.
