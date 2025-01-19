@@ -21,7 +21,8 @@ class F1Repository {
       pageLimit = _maxRacePerPageLimit;
     }
 
-    final Response<dynamic> response = await f1service.getF1Races(
+    final Response<dynamic> response = await f1service.getF1Resource(
+      resource: F1Resource.races,
       pageLimit: pageLimit,
     );
 
