@@ -34,8 +34,8 @@ class Circuit with _$Circuit {
     "url": "https://en.wikipedia.org/wiki/Adelaide_Street_Circuit",
     "circuitName": "Adelaide Street Circuit",
     "Location": {
-      "lat": -34.9272,
-      "long": 138.617,
+      "lat": "-34.9272",
+      "long": "138.617",
       "locality": "Adelaide",
       "country": "Australia"
     }
