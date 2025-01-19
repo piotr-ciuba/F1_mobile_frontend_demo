@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:f1_mobile_frontend_demo/core/services/f1_service.dart';
+import 'package:f1_mobile_frontend_demo/extensions/logic/dio_extensions.dart';
 import 'package:f1_mobile_frontend_demo/models/mr_data/mr_data.dart';
 import 'package:f1_mobile_frontend_demo/models/race/race.dart';
 import 'package:injectable/injectable.dart';
@@ -26,7 +27,7 @@ class F1Repository {
       pageLimit: pageLimit,
     );
 
-    if (response.data != null) {
+    if (response.isSuccess && response.data != null) {
       final MrData mrData = MrData.fromJson(response.data['MRData']);
       final List<Race>? responseRaces = mrData.raceTable?.races;
 
