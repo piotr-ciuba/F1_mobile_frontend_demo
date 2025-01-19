@@ -22,4 +22,62 @@ class Result with _$Result {
   }) = _Result;
 
   factory Result.fromJson(Map<String, dynamic> json) => _$ResultFromJson(json);
+
+  static Result get testModel => Result(
+        number: '2',
+        position: '1',
+        positionText: '1',
+        points: '9',
+        driver: Driver(
+          driverId: 'farina',
+          url: 'http://en.wikipedia.org/wiki/Nino_Farina',
+          givenName: 'Nino',
+          familyName: 'Farina',
+          dateOfBirth: '1906-10-30',
+          nationality: 'Italian',
+        ),
+        constructor: Constructor(
+          constructorId: 'alfa',
+          url: 'http://en.wikipedia.org/wiki/Alfa_Romeo_in_Formula_One',
+          name: 'Alfa Romeo',
+          nationality: 'Swiss',
+        ),
+        grid: '1',
+        laps: '70',
+        status: 'Finished',
+        time: Time(
+          millis: '8003600',
+          time: '2:13:23.600',
+        ),
+      );
+
+  static String get testModelJson => '''
+  {
+    "number": "2",
+    "position": "1",
+    "positionText": "1",
+    "points": "9",
+    "Driver": {
+        "driverId": "farina",
+        "url": "http://en.wikipedia.org/wiki/Nino_Farina",
+        "givenName": "Nino",
+        "familyName": "Farina",
+        "dateOfBirth": "1906-10-30",
+        "nationality": "Italian"
+    },
+    "Constructor": {
+        "constructorId": "alfa",
+        "url": "http://en.wikipedia.org/wiki/Alfa_Romeo_in_Formula_One",
+        "name": "Alfa Romeo",
+        "nationality": "Swiss"
+    },
+    "grid": "1",
+    "laps": "70",
+    "status": "Finished",
+    "Time": {
+        "millis": "8003600",
+        "time": "2:13:23.600"
+    }
+  }
+  ''';
 }
