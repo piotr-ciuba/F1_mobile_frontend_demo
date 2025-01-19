@@ -21,5 +21,5 @@ Map<String, dynamic> _$$CircuitImplToJson(_$CircuitImpl instance) =>
       'circuitId': instance.circuitId,
       'url': instance.url,
       'circuitName': instance.circuitName,
-      'Location': instance.location,
+      'Location': instance.location?.toJson(),
     };

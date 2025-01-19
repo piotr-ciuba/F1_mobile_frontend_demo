@@ -23,6 +23,6 @@ Map<String, dynamic> _$$RaceImplToJson(_$RaceImpl instance) =>
       'round': instance.round,
       'url': instance.url,
       'raceName': instance.raceName,
-      'Circuit': instance.circuit,
+      'Circuit': instance.circuit?.toJson(),
       'date': instance.date,
     };

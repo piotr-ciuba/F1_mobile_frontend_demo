@@ -15,5 +15,5 @@ _$StatusTableImpl _$$StatusTableImplFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$StatusTableImplToJson(_$StatusTableImpl instance) =>
     <String, dynamic>{
-      'Status': instance.status,
+      'Status': instance.status?.map((e) => e.toJson()).toList(),
     };

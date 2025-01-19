@@ -13,5 +13,5 @@ _$F1Impl _$$F1ImplFromJson(Map<String, dynamic> json) => _$F1Impl(
     );
 
 Map<String, dynamic> _$$F1ImplToJson(_$F1Impl instance) => <String, dynamic>{
-      'MRData': instance.mrData,
+      'MRData': instance.mrData?.toJson(),
     };

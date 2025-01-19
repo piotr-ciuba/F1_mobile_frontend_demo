@@ -15,5 +15,5 @@ _$DriverTableImpl _$$DriverTableImplFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$DriverTableImplToJson(_$DriverTableImpl instance) =>
     <String, dynamic>{
-      'Drivers': instance.drivers,
+      'Drivers': instance.drivers?.map((e) => e.toJson()).toList(),
     };

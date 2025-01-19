@@ -15,5 +15,5 @@ _$CircuitTableImpl _$$CircuitTableImplFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$CircuitTableImplToJson(_$CircuitTableImpl instance) =>
     <String, dynamic>{
-      'Circuits': instance.circuits,
+      'Circuits': instance.circuits?.map((e) => e.toJson()).toList(),
     };

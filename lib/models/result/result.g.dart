@@ -31,10 +31,10 @@ Map<String, dynamic> _$$ResultImplToJson(_$ResultImpl instance) =>
       'position': instance.position,
       'positionText': instance.positionText,
       'points': instance.points,
-      'Driver': instance.driver,
-      'Constructor': instance.constructor,
+      'Driver': instance.driver?.toJson(),
+      'Constructor': instance.constructor?.toJson(),
       'grid': instance.grid,
       'laps': instance.laps,
       'status': instance.status,
-      'Time': instance.time,
+      'Time': instance.time?.toJson(),
     };

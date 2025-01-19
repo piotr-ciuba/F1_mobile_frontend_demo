@@ -15,5 +15,5 @@ _$SeasonTableImpl _$$SeasonTableImplFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$SeasonTableImplToJson(_$SeasonTableImpl instance) =>
     <String, dynamic>{
-      'Seasons': instance.seasons,
+      'Seasons': instance.seasons?.map((e) => e.toJson()).toList(),
     };

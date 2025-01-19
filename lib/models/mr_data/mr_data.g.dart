@@ -29,6 +29,6 @@ Map<String, dynamic> _$$MrDataImplToJson(_$MrDataImpl instance) =>
       'limit': instance.limit,
       'offset': instance.offset,
       'total': instance.total,
-      'RaceTable': instance.raceTable,
-      'DriverTable': instance.driverTable,
+      'RaceTable': instance.raceTable?.toJson(),
+      'DriverTable': instance.driverTable?.toJson(),
     };

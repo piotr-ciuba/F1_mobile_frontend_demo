@@ -17,5 +17,5 @@ _$ConstructorTableImpl _$$ConstructorTableImplFromJson(
 Map<String, dynamic> _$$ConstructorTableImplToJson(
         _$ConstructorTableImpl instance) =>
     <String, dynamic>{
-      'Constructors': instance.constructors,
+      'Constructors': instance.constructors?.map((e) => e.toJson()).toList(),
     };

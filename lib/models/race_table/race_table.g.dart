@@ -15,5 +15,5 @@ _$RaceTableImpl _$$RaceTableImplFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$RaceTableImplToJson(_$RaceTableImpl instance) =>
     <String, dynamic>{
-      'Races': instance.races,
+      'Races': instance.races?.map((e) => e.toJson()).toList(),
     };
