@@ -6,24 +6,26 @@ part 'app_settings_event.dart';
 part 'app_settings_state.dart';
 
 class AppSettingsBloc extends Bloc<AppSettingsEvent, AppSettingsState> {
-  AppSettingsBloc(this._repository) : super(const AppSettingsInitial()) {
+  AppSettingsBloc({
+    required this.settingsRepository,
+  }) : super(const AppSettingsInitial()) {
     on<ChangeLanguageEvent>(_onChangeLanguage);
 
     _loadSettings();
   }
 
-  final SettingsRepository _repository;
+  final SettingsRepository settingsRepository;
 
   Future<void> _onChangeLanguage(
     ChangeLanguageEvent event,
     Emitter<AppSettingsState> emit,
   ) async {
     emit(AppSettingsChanged(languageCode: event.languageCode));
-    await _repository.saveLanguageCode(event.languageCode);
+    await settingsRepository.saveLanguageCode(event.languageCode);
   }
 
   Future<void> _loadSettings() async {
-    final languageCode = await _repository.loadLanguageCode();
+    final languageCode = await settingsRepository.loadLanguageCode();
     add(ChangeLanguageEvent(languageCode));
   }
 }
