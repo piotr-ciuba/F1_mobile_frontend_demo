@@ -21,6 +21,7 @@ dependencies:
   json_serializable: ^6.9.0                                               # BSD-3-Clause
   json_annotation: ^4.9.0                                                 # BSD-3-Clause
   intl: ^0.20.0                                                           # BSD-3-Clause
+  shared_preferences: ^2.0.0                                              # BSD-3-Clause
   flutter_screenutil: ^5.9.3                                              # Apache-2.0
 
 dev_dependencies:
