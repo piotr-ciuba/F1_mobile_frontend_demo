@@ -1,7 +1,7 @@
 import 'package:f1_mobile_frontend_demo/core/services/settings_service.dart';
 import 'package:injectable/injectable.dart';
 
-@singleton
+@injectable
 class SettingsRepository {
   final SettingsService _settingsService;
 

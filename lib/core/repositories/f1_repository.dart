@@ -11,7 +11,7 @@ import 'package:f1_mobile_frontend_demo/models/season/season.dart';
 import 'package:f1_mobile_frontend_demo/models/status/status.dart';
 import 'package:injectable/injectable.dart';
 
-@singleton
+@injectable
 class F1Repository {
   F1Repository(
     this.f1service,

@@ -41,9 +41,9 @@ extension GetItInjectableX on _i174.GetIt {
         ));
     gh.singleton<_i177.F1Service>(
         () => _i177.F1Service(gh<_i1008.ApiClient>()));
-    gh.singleton<_i101.SettingsRepository>(
+    gh.factory<_i101.SettingsRepository>(
         () => _i101.SettingsRepository(gh<_i583.SettingsService>()));
-    gh.singleton<_i35.F1Repository>(
+    gh.factory<_i35.F1Repository>(
         () => _i35.F1Repository(gh<_i177.F1Service>()));
     return this;
   }
