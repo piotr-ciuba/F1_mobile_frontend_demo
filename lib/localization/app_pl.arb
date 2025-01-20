@@ -23,5 +23,6 @@
     "raceName": "Nazwa wyścigu",
     "raceUrl": "Url wyścigu",
     "circuitName": "Nazwa toru",
-    "circuitUrl": "Url toru"
+    "circuitUrl": "Url toru",
+    "downloadToSeeDashboard": "Najpierw pobierz wyścigi, aby zobaczyć podsumowanie"
 }

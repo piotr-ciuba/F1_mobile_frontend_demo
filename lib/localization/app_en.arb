@@ -23,5 +23,6 @@
     "raceName": "Race name",
     "raceUrl": "Race url",
     "circuitName": "Circuit name",
-    "circuitUrl": "Circuit url"
+    "circuitUrl": "Circuit url",
+    "downloadToSeeDashboard": "First, download the races to see the dashboard"
 }
