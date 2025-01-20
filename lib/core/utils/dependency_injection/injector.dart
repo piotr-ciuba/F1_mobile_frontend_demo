@@ -9,4 +9,4 @@ final serviceLocator = GetIt.instance;
   preferRelativeImports: true,
   asExtension: true,
 )
-void injectorSetup() => serviceLocator.init();
+Future<void> injectorSetup() async => serviceLocator.init();
