@@ -32,6 +32,7 @@ class F1Bloc extends Bloc<F1Event, F1State> {
 
       List<Race>? responseList = await f1Repository.getF1Races(
         pageLimit: event.pageLimit,
+        offset: event.offset,
       );
       late MrData updatedMrData;
 

@@ -29,54 +29,91 @@ class F1Repository {
 
   Future<List<Race>?> getF1Races({
     int? pageLimit,
+    int? offset,
   }) async {
-    return await _getF1Resource(pageLimit, F1Resource.races) as List<Race>?;
+    return await _getF1Resource(
+      pageLimit,
+      offset,
+      F1Resource.races,
+    ) as List<Race>?;
   }
 
   Future<List<Status>?> getF1Status({
     int? pageLimit,
+    int? offset,
   }) async {
-    return await _getF1Resource(pageLimit, F1Resource.status) as List<Status>?;
+    return await _getF1Resource(
+      pageLimit,
+      offset,
+      F1Resource.status,
+    ) as List<Status>?;
   }
 
   Future<List<Season>?> getF1Seasons({
     int? pageLimit,
+    int? offset,
   }) async {
-    return await _getF1Resource(pageLimit, F1Resource.seasons) as List<Season>?;
+    return await _getF1Resource(
+      pageLimit,
+      offset,
+      F1Resource.seasons,
+    ) as List<Season>?;
   }
 
   Future<List<Driver>?> getF1Drivers({
     int? pageLimit,
+    int? offset,
   }) async {
-    return await _getF1Resource(pageLimit, F1Resource.drivers) as List<Driver>?;
+    return await _getF1Resource(
+      pageLimit,
+      offset,
+      F1Resource.drivers,
+    ) as List<Driver>?;
   }
 
   Future<List<Result>?> getF1Results({
     int? pageLimit,
+    int? offset,
   }) async {
-    return await _getF1Resource(pageLimit, F1Resource.results) as List<Result>?;
+    return await _getF1Resource(
+      pageLimit,
+      offset,
+      F1Resource.results,
+    ) as List<Result>?;
   }
 
   Future<List<Circuit>?> getF1Circuits({
     int? pageLimit,
+    int? offset,
   }) async {
-    return await _getF1Resource(pageLimit, F1Resource.circuits)
-        as List<Circuit>?;
+    return await _getF1Resource(
+      pageLimit,
+      offset,
+      F1Resource.circuits,
+    ) as List<Circuit>?;
   }
 
   Future<List<Constructor>?> getF1Constructors({
     int? pageLimit,
+    int? offset,
   }) async {
-    return await _getF1Resource(pageLimit, F1Resource.constructors)
-        as List<Constructor>?;
+    return await _getF1Resource(
+      pageLimit,
+      offset,
+      F1Resource.constructors,
+    ) as List<Constructor>?;
   }
 
   Future<List<Object>?> _getF1Resource(
     int? pageLimit,
+    int? offset,
     F1Resource resource,
   ) async {
-    Response<dynamic> response =
-        await _getResourceResponse(resource, pageLimit);
+    Response<dynamic> response = await _getResourceResponse(
+      resource,
+      pageLimit,
+      offset,
+    );
 
     if (response.isSuccess && response.data != null) {
       final MrData mrData = MrData.fromJson(response.data['MRData']);
@@ -89,6 +126,7 @@ class F1Repository {
   Future<Response<dynamic>> _getResourceResponse(
     F1Resource resource,
     int? pageLimit,
+    int? offset,
   ) async {
     switch (resource) {
       case F1Resource.races:
@@ -131,6 +169,7 @@ class F1Repository {
     final Response<dynamic> response = await f1service.getF1Resource(
       resource: F1Resource.races,
       pageLimit: pageLimit,
+      offset: offset,
     );
 
     return response;

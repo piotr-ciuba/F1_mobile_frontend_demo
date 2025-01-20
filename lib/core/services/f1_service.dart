@@ -27,13 +27,12 @@ class F1Service {
   Future<Response<dynamic>> getF1Resource({
     required F1Resource resource,
     int? pageLimit,
+    int? offset,
   }) async {
-    Map<String, dynamic>? queryParameters;
-    if (pageLimit != null) {
-      queryParameters = {
-        'limit': pageLimit,
-      };
-    }
+    Map<String, dynamic>? queryParameters = {
+      'limit': pageLimit,
+      'offset': offset,
+    };
 
     switch (resource) {
       case F1Resource.races:

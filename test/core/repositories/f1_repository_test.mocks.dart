@@ -45,6 +45,7 @@ class MockF1Service extends _i1.Mock implements _i3.F1Service {
   _i4.Future<_i2.Response<dynamic>> getF1Resource({
     required _i3.F1Resource? resource,
     int? pageLimit,
+    int? offset,
   }) =>
       (super.noSuchMethod(
         Invocation.method(
@@ -53,6 +54,7 @@ class MockF1Service extends _i1.Mock implements _i3.F1Service {
           {
             #resource: resource,
             #pageLimit: pageLimit,
+            #offset: offset,
           },
         ),
         returnValue:
@@ -64,6 +66,7 @@ class MockF1Service extends _i1.Mock implements _i3.F1Service {
             {
               #resource: resource,
               #pageLimit: pageLimit,
+              #offset: offset,
             },
           ),
         )),
