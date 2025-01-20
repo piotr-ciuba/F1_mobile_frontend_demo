@@ -4,10 +4,12 @@ import 'package:f1_mobile_frontend_demo/models/race/race.dart';
 import 'package:f1_mobile_frontend_demo/models/race_table/race_table.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:equatable/equatable.dart';
+import 'package:injectable/injectable.dart';
 
 part 'f1_event.dart';
 part 'f1_state.dart';
 
+@singleton
 class F1Bloc extends Bloc<F1Event, F1State> {
   F1Bloc({
     required this.f1Repository,

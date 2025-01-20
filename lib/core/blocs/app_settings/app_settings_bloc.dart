@@ -1,10 +1,12 @@
 import 'package:equatable/equatable.dart';
 import 'package:f1_mobile_frontend_demo/core/repositories/settings_repository.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:injectable/injectable.dart';
 
 part 'app_settings_event.dart';
 part 'app_settings_state.dart';
 
+@singleton
 class AppSettingsBloc extends Bloc<AppSettingsEvent, AppSettingsState> {
   AppSettingsBloc({
     required this.settingsRepository,

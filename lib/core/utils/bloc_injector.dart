@@ -17,24 +17,31 @@ class BlocInjector extends StatelessWidget {
 
   final Widget child;
 
-  F1Repository get _f1Repository =>
+  final F1Repository _f1Repository =
       serviceLocator.get<F1Repository>(param1: serviceLocator.get<F1Service>());
-  SettingsRepository get _settingsRepository => serviceLocator
+  final SettingsRepository _settingsRepository = serviceLocator
       .get<SettingsRepository>(param1: serviceLocator.get<SettingsService>());
 
-  F1Bloc get _f1Bloc => F1Bloc(
-        f1Repository: _f1Repository,
-      );
-  AppSettingsBloc get _appSettingsBloc => AppSettingsBloc(
-        settingsRepository: _settingsRepository,
-      );
-  final NavigationBarBloc _navigationBarBloc = NavigationBarBloc();
+  // late final F1Bloc _f1Bloc = F1Bloc(
+  //   f1Repository: _f1Repository,
+  // );
+  // late final AppSettingsBloc _appSettingsBloc = AppSettingsBloc(
+  //   settingsRepository: _settingsRepository,
+  // );
+  // late final NavigationBarBloc _navigationBarBloc = NavigationBarBloc();
+
+  final F1Bloc _f1Bloc = serviceLocator.get<F1Bloc>();
+  final AppSettingsBloc _appSettingsBloc =
+      serviceLocator.get<AppSettingsBloc>();
+  final NavigationBarBloc _navigationBarBloc =
+      serviceLocator.get<NavigationBarBloc>();
 
   @override
   Widget build(BuildContext context) {
     return MultiRepositoryProvider(
       providers: [
         RepositoryProvider.value(value: _f1Repository),
+        RepositoryProvider.value(value: _settingsRepository),
       ],
       child: MultiBlocProvider(
         providers: [
