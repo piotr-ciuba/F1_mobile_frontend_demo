@@ -7,6 +7,8 @@ mixin AssetPaths {
   static const String leclerc = 'lib/assets/images/jpg/leclerc.jpg';
   static const String perez = 'lib/assets/images/jpg/perez.jpg';
   static const String russell = 'lib/assets/images/jpg/russell.jpg';
+  static const String wikipediaLogo =
+      'lib/assets/images/jpg/wikipedia_logo.png';
 
   // SVGs
   static const String f1Logo = 'lib/assets/images/svg/f1_logo.svg';
@@ -19,6 +21,7 @@ mixin AssetPaths {
     leclerc,
     perez,
     russell,
+    wikipediaLogo,
   ];
 
   static const List<String> svgImages = [
