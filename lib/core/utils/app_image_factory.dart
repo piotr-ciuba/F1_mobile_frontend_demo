@@ -33,7 +33,7 @@ mixin AppImageFactory {
   static Widget get imageLeclerc => Image.asset(AssetPaths.leclerc);
   static Widget get imagePerez => Image.asset(AssetPaths.perez);
   static Widget get imageRussell => Image.asset(AssetPaths.russell);
-  static Widget svgF1Logo(Color color) => SvgPicture.asset(
+  static Widget svgF1Logo([Color? color]) => SvgPicture.asset(
         AssetPaths.f1Logo,
         color: color,
       );

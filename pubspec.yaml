@@ -39,3 +39,7 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   generate: true
+  assets:
+    - lib/assets/images/
+    - lib/assets/images/jpg/
+    - lib/assets/images/svg/
