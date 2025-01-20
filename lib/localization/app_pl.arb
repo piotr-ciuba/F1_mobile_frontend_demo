@@ -24,5 +24,10 @@
     "raceUrl": "Url wyścigu",
     "circuitName": "Nazwa toru",
     "circuitUrl": "Url toru",
-    "downloadToSeeDashboard": "Najpierw pobierz wyścigi, aby zobaczyć podsumowanie"
+    "downloadToSeeDashboard": "Najpierw pobierz wyścigi, aby zobaczyć podsumowanie",
+    "seasonCount": "Liczba sezonów",
+    "raceCount": "Liczba wyścigów",
+    "circuitCount": "Liczba torów",
+    "countryCount": "Liczba państw"
+
 }

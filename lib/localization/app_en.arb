@@ -24,5 +24,9 @@
     "raceUrl": "Race url",
     "circuitName": "Circuit name",
     "circuitUrl": "Circuit url",
-    "downloadToSeeDashboard": "First, download the races to see the dashboard"
+    "downloadToSeeDashboard": "First, download the races to see the dashboard",
+    "seasonCount": "Season count",
+    "raceCount": "Race count",
+    "circuitCount": "Circuit count",
+    "countryCount": "Country count"
 }
