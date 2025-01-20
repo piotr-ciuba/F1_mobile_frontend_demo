@@ -12,7 +12,7 @@ enum F1Resource {
   status
 }
 
-@singleton
+@injectable
 class F1Service {
   F1Service(
     this._apiClient,
