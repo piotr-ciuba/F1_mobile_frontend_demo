@@ -22,14 +22,6 @@ class BlocInjector extends StatelessWidget {
   final SettingsRepository _settingsRepository = serviceLocator
       .get<SettingsRepository>(param1: serviceLocator.get<SettingsService>());
 
-  // late final F1Bloc _f1Bloc = F1Bloc(
-  //   f1Repository: _f1Repository,
-  // );
-  // late final AppSettingsBloc _appSettingsBloc = AppSettingsBloc(
-  //   settingsRepository: _settingsRepository,
-  // );
-  // late final NavigationBarBloc _navigationBarBloc = NavigationBarBloc();
-
   final F1Bloc _f1Bloc = serviceLocator.get<F1Bloc>();
   final AppSettingsBloc _appSettingsBloc =
       serviceLocator.get<AppSettingsBloc>();
