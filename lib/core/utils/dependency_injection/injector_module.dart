@@ -1,6 +1,7 @@
 import 'package:f1_mobile_frontend_demo/common/endpoints.dart';
 import 'package:injectable/injectable.dart';
 import 'package:dio/dio.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 @module
 abstract class RegisterModule {
@@ -9,4 +10,8 @@ abstract class RegisterModule {
 
   @singleton
   Endpoints provideEndpoints() => Endpoints();
+
+  @preResolve
+  Future<SharedPreferences> provideSharedPrefs() =>
+      SharedPreferences.getInstance();
 }
