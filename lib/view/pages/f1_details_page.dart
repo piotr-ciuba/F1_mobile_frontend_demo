@@ -66,7 +66,7 @@ class F1DetailsPage extends StatelessWidget {
 
   Widget _buildLoadMoreButton(BuildContext context) {
     final int currentLength =
-        context.read<F1Bloc>().state.mrData?.raceTable?.races?.length ?? 0;
+        context.watch<F1Bloc>().state.mrData?.raceTable?.races?.length ?? 0;
 
     return Container(
       padding: EdgeInsets.symmetric(
