@@ -8,5 +8,11 @@
     "sprint": "Sprint",
     "status": "Status",
     "name": "Name",
-    "surname": "Surname"
+    "surname": "Surname",
+    "nothingHere": "Nothing here",
+    "downloadNow": "Download now",
+    "loadMore": "Load more",
+    "language": "Language",
+    "polish": "Polish",
+    "english": "English"
 }
