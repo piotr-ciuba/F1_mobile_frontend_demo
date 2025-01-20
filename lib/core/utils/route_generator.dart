@@ -1,6 +1,8 @@
 import 'package:f1_mobile_frontend_demo/common/routes.dart';
 import 'package:f1_mobile_frontend_demo/core/utils/bloc_injector.dart';
+import 'package:f1_mobile_frontend_demo/models/race/race.dart';
 import 'package:f1_mobile_frontend_demo/view/pages/f1_dashboard_page.dart';
+import 'package:f1_mobile_frontend_demo/view/pages/f1_race_details_page.dart';
 import 'package:f1_mobile_frontend_demo/view/pages/main_page.dart';
 import 'package:flutter/material.dart';
 
@@ -11,6 +13,10 @@ class RouteGenerator {
         return _pageWithBloc(child: const MainPage());
       case Routes.dashboardRoute:
         return _pageWithBloc(child: const F1DashboardPage());
+      case Routes.raceRoute:
+        return _pageWithBloc(
+          child: F1RaceDetailsPage(race: settings.arguments as Race),
+        );
 
       default:
         return _errorRoute();

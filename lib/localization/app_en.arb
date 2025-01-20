@@ -14,5 +14,14 @@
     "loadMore": "Load more",
     "language": "Language",
     "polish": "Polish",
-    "english": "English"
+    "english": "English",
+    "raceDetails": "F1 race details",
+    "date": "Date",
+    "round": "Round",
+    "locality": "Locality",
+    "country": "Country",
+    "raceName": "Race name",
+    "raceUrl": "Race url",
+    "circuitName": "Circuit name",
+    "circuitUrl": "Circuit url"
 }

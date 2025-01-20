@@ -14,5 +14,14 @@
     "loadMore": "Załaduj więcej",
     "language": "Język",
     "polish": "Polski",
-    "english": "Angielski"
+    "english": "Angielski",
+    "raceDetails": "Szczegóły wyścigu F1",
+    "date": "Data",
+    "round": "Runda",
+    "locality": "Lokalizacja",
+    "country": "Kraj",
+    "raceName": "Nazwa wyścigu",
+    "raceUrl": "Url wyścigu",
+    "circuitName": "Nazwa toru",
+    "circuitUrl": "Url toru"
 }

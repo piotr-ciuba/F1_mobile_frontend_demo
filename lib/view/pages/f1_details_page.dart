@@ -1,4 +1,5 @@
 import 'package:f1_mobile_frontend_demo/common/app_colors.dart';
+import 'package:f1_mobile_frontend_demo/common/routes.dart';
 import 'package:f1_mobile_frontend_demo/common/sizes.dart';
 import 'package:f1_mobile_frontend_demo/common/spacings.dart';
 import 'package:f1_mobile_frontend_demo/core/blocs/f1/f1_bloc.dart';
@@ -113,35 +114,42 @@ class F1DetailsPage extends StatelessWidget {
       itemBuilder: (context, index) {
         final Race? race = races?[index];
 
-        return Column(
-          children: [
-            ListTile(
-              title: Text(race?.raceName ?? ''),
-              subtitle: Text(race?.circuit?.circuitName ?? ''),
-              leading: Text(race?.season ?? ''),
-              trailing: GestureDetector(
-                onTap: () => openInAppWebPage(race?.url ?? ''),
-                child: FittedBox(
-                  child: Column(
-                    children: [
-                      SizedBox(
-                        height: 30.h,
-                        width: 30.h,
-                        child: AppImageFactory.imageWikipediaLogo,
-                      ),
-                      Text('Wiki'),
-                    ],
+        return GestureDetector(
+          onTap: () => Navigator.pushNamed(
+            context,
+            Routes.raceRoute,
+            arguments: race,
+          ),
+          child: Column(
+            children: [
+              ListTile(
+                title: Text(race?.raceName ?? ''),
+                subtitle: Text(race?.circuit?.circuitName ?? ''),
+                leading: Text(race?.season ?? ''),
+                trailing: GestureDetector(
+                  onTap: () => openInAppWebPage(race?.url ?? ''),
+                  child: FittedBox(
+                    child: Column(
+                      children: [
+                        SizedBox(
+                          height: 30.h,
+                          width: 30.h,
+                          child: AppImageFactory.imageWikipediaLogo,
+                        ),
+                        Text('Wiki'),
+                      ],
+                    ),
                   ),
                 ),
               ),
-            ),
-            Padding(
-              padding: EdgeInsets.symmetric(
-                horizontal: horizontalMediumSpacing,
+              Padding(
+                padding: EdgeInsets.symmetric(
+                  horizontal: horizontalMediumSpacing,
+                ),
+                child: Divider(),
               ),
-              child: Divider(),
-            ),
-          ],
+            ],
+          ),
         );
       },
     );
